@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    main img{
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .imgLine{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+</style>
+<body>
+    <main>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg7ejpU1mXE5a3keTgUIVCRrbY0bebDKFhZA&usqp=CAU" alt="">
+    </main>
+    <div class="imgLine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUjBljW8T1_3491MKjWa7MpVyLRAkEY_pNw&usqp=CAU" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNbsGt9lHGmgSRcA4NzpxKd5PdxZuKbxaKrg&usqp=CAU" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWNwjRX-WZCBTr7VdbKq1QaT7YNz5jUHiKA&usqp=CAU" alt="">
+    </div>
+    <script>
+        const imgs = document.querySelectorAll(".imgLine img");
+        const main_img = document.querySelector("main img");
+        imgs.forEach((img) => img.onclick = () => (main_img.src = img.src));
+        
+    </script>
+</body>
+</html>
